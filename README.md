@@ -20,7 +20,7 @@ Apache example
 
 ## Database
 
-This demo uses an SQLite in-memory database with a couple of records. See config/app.php under Datasources > default >init.
+This demo uses an SQLite in-memory database with a couple of records. See config/app.php under Datasources > default > init.
 
 ## Accessing the API
 

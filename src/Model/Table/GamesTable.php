@@ -8,7 +8,7 @@ use Cake\Validation\Validator;
 
 use ApiFoo\Api\ApiRequest;
 use ApiFoo\Api\ApiRepository;
-use ApiFoo\Adapters\ORM\Cake\CakeOrm32;
+use ApiFoo\Adapters\Cake\V3_2\CakeOrm;
 
 class GamesTable extends Table
 {
@@ -21,7 +21,7 @@ class GamesTable extends Table
             ->select(['root.id', 'root.title'])
         ;
 
-        $apiRepository = new ApiRepository(new CakeOrm32($this));
+        $apiRepository = new ApiRepository(new CakeOrm($this));
         $results = $apiRepository->getList($query, $apiRequest);
 
         return $results;
@@ -37,7 +37,7 @@ class GamesTable extends Table
             ->select(['root.id', 'root.title', 'root.image_path'])
         ;
 
-        $apiRepository = new ApiRepository(new CakeOrm32($this));
+        $apiRepository = new ApiRepository(new CakeOrm($this));
         $results = $apiRepository->getItem($query, $apiRequest);
 
         return $results;

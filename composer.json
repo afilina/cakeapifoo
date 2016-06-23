@@ -1,6 +1,6 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
+    "name": "afilina/cakeapifoo-demo",
+    "description": "Demo project using PHP API Foo and CakePHP 3.2",
     "homepage": "http://cakephp.org",
     "type": "project",
     "license": "MIT",
@@ -10,10 +10,10 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
-        "guzzlehttp/guzzle": "~6.0",
         "afilina/phpapifoo": "^1.0@dev"
     },
     "require-dev": {
+        "guzzlehttp/guzzle": "~6.0",
         "psy/psysh": "@stable",
         "cakephp/debug_kit": "~3.2",
         "cakephp/bake": "~1.1"

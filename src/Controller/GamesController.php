@@ -6,7 +6,7 @@ use Cake\Event\Event;
 
 use ApiFoo\Api\ApiRequest;
 use ApiFoo\Api\ApiRepository;
-use ApiFoo\Adapters\Request\Cake\CakeRequest32;
+use ApiFoo\Adapters\Cake\V3_2\CakeRequest;
 
 class GamesController extends AppController
 {
@@ -18,7 +18,7 @@ class GamesController extends AppController
 
     public function getList()
     {
-        $apiRequest = new ApiRequest(new CakeRequest32($this->request));
+        $apiRequest = new ApiRequest(new CakeRequest($this->request));
 
         $gamesTable = TableRegistry::get('Games');
         $response = $gamesTable->getApiList($apiRequest);
@@ -29,7 +29,7 @@ class GamesController extends AppController
 
     public function getItem($id)
     {
-        $apiRequest = new ApiRequest(new CakeRequest32($this->request));
+        $apiRequest = new ApiRequest(new CakeRequest($this->request));
         $apiRequest->addUserFilter('id', $id);
 
         $gamesTable = TableRegistry::get('Games');
@@ -41,7 +41,7 @@ class GamesController extends AppController
 
     public function patchItem($id)
     {
-        $apiRequest = new ApiRequest(new CakeRequest32($this->request));
+        $apiRequest = new ApiRequest(new CakeRequest($this->request));
         $apiRequest->addUserFilter('id', $id);
 
         $gamesTable = TableRegistry::get('Games');
